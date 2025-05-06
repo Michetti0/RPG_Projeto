@@ -1,0 +1,181 @@
+body {
+    background-color: #1b1b2f;
+    color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h1, h2 {
+    color: #fce38a;
+    margin-bottom: 10px;
+  }
+  
+  #class-selection button,
+  #actions button {
+    background-color: #0f3460;
+    color: #f0f0f0;
+    border: none;
+    padding: 12px 20px;
+    margin: 8px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  #class-selection button:hover,
+  #actions button:hover {
+    background-color: #16213e;
+    transform: scale(1.05);
+  }
+  
+  .zone {
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid white;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 10px;
+  }
+  
+  .locked {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+  
+  .boss {
+    border-color: red;
+    color: red;
+  }
+  
+  #battle {
+    display: none;
+    justify-content: space-around;
+    margin-top: 30px;
+    border: 2px solid #16213e;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #0f3460;
+  }
+  
+  #player, #enemy {
+    width: 40%;
+    padding: 10px;
+    background-color: #16213e;
+    border-radius: 10px;
+  }
+  
+  .hp-bar-container {
+    width: 100%;
+    background-color: #444;
+    border-radius: 6px;
+    height: 20px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  
+  .hp-bar {
+    height: 100%;
+    width: 100%;
+    background-color: limegreen;
+    transition: width 0.3s ease, background-color 0.3s ease;
+    border-radius: 6px 0 0 6px;
+  }
+  
+  #log {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #f38181;
+    min-height: 24px;
+  }
+  
+  #skill-description {
+    margin-top: 20px;
+    font-style: italic;
+    color: #b5b5b5;
+    background-color: #0f3460;
+    padding: 10px;
+    border-radius: 8px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 50px;
+    box-shadow: 0 0 8px #000;
+    transition: opacity 0.3s ease;
+  }
+  
+  #restart-btn {
+    background-color: #f38181;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    margin-top: 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  #restart-btn:hover {
+    background-color: #e94560;
+    transform: scale(1.05);
+  }
+  
+  @media (max-width: 768px) {
+    #battle {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    #player, #enemy {
+      width: 80%;
+      padding: 15px;
+    }
+  
+    #actions {
+      width: 100%;
+      gap: 10px;
+    }
+  
+    #skill-description {
+      width: 90%;
+      font-size: 14px;
+    }
+  
+    #restart-btn {
+      width: 90%;
+      padding: 14px 24px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1, h2 {
+      font-size: 20px;
+    }
+  
+    #class-selection button,
+    #actions button {
+      padding: 10px 18px;
+      font-size: 14px;
+    }
+  
+    #player, #enemy {
+      width: 90%;
+      padding: 12px;
+    }
+  
+    #skill-description {
+      font-size: 12px;
+      width: 100%;
+    }
+  
+    #restart-btn {
+      width: 100%;
+      padding: 12px;
+      font-size: 14px;
+    }
+  }
+  

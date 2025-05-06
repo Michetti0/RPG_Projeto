@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>RPG com Mapas e Classes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Escolha sua Classe</h1>
+  <div id="class-selection">
+    <h2>Escolha sua classe:</h2>
+    <button onclick="selectClass('guerreiro')">Guerreiro</button>
+    <button onclick="selectClass('mago')">Mago</button>
+    <button onclick="selectClass('arqueiro')">Arqueiro</button>
+  </div>
+
+  <div id="map-section" style="display: none;">
+    <h2>Mapa</h2>
+    <div class="zone" data-zone="1">🌲 Floresta</div>
+    <div class="zone locked" data-zone="2">🏜️ Deserto</div>
+    <div class="zone locked" data-zone="3">❄️ Gélido Pico</div>
+    <div class="zone locked boss" data-zone="4">🐉 Templo do Dragão (Chefe)</div>
+  </div>
+
+  <div id="battle" style="display: none;">
+    <h2>Batalha contra <span id="zone-name"></span></h2>
+    <div id="player">
+      <div class="hp-bar-container">
+        <div id="player-hp-bar" class="hp-bar"></div>
+      </div>
+      <h3>Você (HP: <span id="player-hp">100</span>)</h3>
+    </div>
+    <div id="enemy">
+      <div class="hp-bar-container">
+        <div id="enemy-hp-bar" class="hp-bar"></div>
+      </div>
+      <h3>Inimigo (HP: <span id="enemy-hp">150</span>)</h3>
+    </div>
+  </div>
+
+  <div id="actions" style="display: none;"></div>
+  <div id="log"></div>
+  <div id="skill-description" style="display: none;"></div>
+  <button id="restart-btn" style="display: none;" onclick="restartGame()">Reiniciar Jogo</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
